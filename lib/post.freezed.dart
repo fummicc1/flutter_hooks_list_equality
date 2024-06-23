@@ -143,3 +143,127 @@ abstract class _Post implements Post {
   _$$PostImplCopyWith<_$PostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$PostListValue {
+  List<Post> get value => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $PostListValueCopyWith<PostListValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PostListValueCopyWith<$Res> {
+  factory $PostListValueCopyWith(
+          PostListValue value, $Res Function(PostListValue) then) =
+      _$PostListValueCopyWithImpl<$Res, PostListValue>;
+  @useResult
+  $Res call({List<Post> value});
+}
+
+/// @nodoc
+class _$PostListValueCopyWithImpl<$Res, $Val extends PostListValue>
+    implements $PostListValueCopyWith<$Res> {
+  _$PostListValueCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as List<Post>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PostListValueImplCopyWith<$Res>
+    implements $PostListValueCopyWith<$Res> {
+  factory _$$PostListValueImplCopyWith(
+          _$PostListValueImpl value, $Res Function(_$PostListValueImpl) then) =
+      __$$PostListValueImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<Post> value});
+}
+
+/// @nodoc
+class __$$PostListValueImplCopyWithImpl<$Res>
+    extends _$PostListValueCopyWithImpl<$Res, _$PostListValueImpl>
+    implements _$$PostListValueImplCopyWith<$Res> {
+  __$$PostListValueImplCopyWithImpl(
+      _$PostListValueImpl _value, $Res Function(_$PostListValueImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$PostListValueImpl(
+      value: null == value
+          ? _value._value
+          : value // ignore: cast_nullable_to_non_nullable
+              as List<Post>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PostListValueImpl implements _PostListValue {
+  _$PostListValueImpl({required final List<Post> value}) : _value = value;
+
+  final List<Post> _value;
+  @override
+  List<Post> get value {
+    if (_value is EqualUnmodifiableListView) return _value;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_value);
+  }
+
+  @override
+  String toString() {
+    return 'PostListValue(value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PostListValueImpl &&
+            const DeepCollectionEquality().equals(other._value, _value));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_value));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PostListValueImplCopyWith<_$PostListValueImpl> get copyWith =>
+      __$$PostListValueImplCopyWithImpl<_$PostListValueImpl>(this, _$identity);
+}
+
+abstract class _PostListValue implements PostListValue {
+  factory _PostListValue({required final List<Post> value}) =
+      _$PostListValueImpl;
+
+  @override
+  List<Post> get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$PostListValueImplCopyWith<_$PostListValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

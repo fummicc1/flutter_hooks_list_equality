@@ -9,3 +9,10 @@ class Post with _$Post {
     required String body,
   }) = _Post;
 }
+
+@freezed
+class PostListValue with _$PostListValue {
+  factory PostListValue({
+    required List<Post> value,
+  }) = _PostListValue;
+}

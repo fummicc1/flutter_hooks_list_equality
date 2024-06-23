@@ -53,12 +53,15 @@ class MyHomePage extends HookConsumerWidget {
       () {
         Timer(const Duration(seconds: 1), () {
           print('insert new post');
-          // OK
-          // postList.value = postList.value;
-          // NG
-          postList.value = [
+          final newValue = [
             ...postList.value,
           ];
+          // OK
+          if (!listEquals(postList.value, newValue)) {
+            postList.value = newValue;
+          }
+          // NG
+          // postList.value = newValue;
         });
         return null;
       },
